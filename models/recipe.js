@@ -11,9 +11,10 @@ const commentSchema = new Schema({
 
 const recipeSchema = new Schema({
   name: String,
+  image: String,
   ingredients: String,
+  recipeUrl: String,
   prepTime: Number,
-  yield: Number,
   contributedBy: String,
   comments: [commentSchema],
 })
