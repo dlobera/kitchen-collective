@@ -1,0 +1,25 @@
+<section>
+  <h1>Tacos! 🌮🌮🌮</h1>
+	<%# New Code Below %>
+  <% if (user) { %>
+    <h2>Add a Taco!</h2>
+    <form action="/recipes" method="POST">
+      <label>
+        Name: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Tasty?
+        <input type="checkbox" name="tasty">
+      </label>
+      <button type="submit">Add</button>
+    </form>
+  <% } %>
+  <h2>All the___</h2>
+	<% recipess.forEach(recipe => { %>
+    <li>
+      hello 
+      <a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a> 
+      is <%= recipe.tasty ? 'tasty' : 'not tasty' %>
+    </li>
+  <% }) %>

@@ -2,18 +2,11 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const recipeSchema = new mongoose.Schema({
-  recipeName: String,
-  image: String,
-  recipeUrl: String,
-}, {
-  timestamps: true
-})
 
-const profileSchema = new mongoose.Schema({
+const profileSchema = new Schema({
   name: String,
   avatar: String,
-  recipes: [recipeSchema]
+  recipes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }], 
 }, {
   timestamps: true
 })
