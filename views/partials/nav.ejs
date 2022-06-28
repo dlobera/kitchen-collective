@@ -1,9 +1,15 @@
-  <% if (!user) { %>
+  <!-- <% if (!user) { %>
     <link rel="stylesheet" href="/stylesheets/siwg.css">
-  <% } %>
+  <% } %> -->
 </head>
 <body>
   <nav>
+    <i class="fa-light fa-pot-food"></i>
+    <a href="/recipes"
+			<%- title === 'Recipes' ? 'class="active"' : '' %>
+		>
+      <button type="submit">Recipes</button>
+		</a>
     <% if (user) { %>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
