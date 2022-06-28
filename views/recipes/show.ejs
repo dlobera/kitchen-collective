@@ -6,11 +6,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Add a new recipe</title>
 </head>
 <body>
+  <h2>Add a recipe!</h2>
+  <form 
+    action="/recipes/<%=recipe._id%>" 
+    method="POST"
+  >
+  <label for="category">Recipe Name</label>
+  <input name="category" type="text" autocomplete="off"> 
+  <label for="">ingredients</label>
+  <input name="ingredients" type="text" autocomplete="off">
+  <input name="prepTime" type="number">
+  <input name="yield"type="number">
+  <button type="submit">Add recipe</button>
   
+  </form>
 </body>
 </html>
-
 <%- include('../partials/footer') %>

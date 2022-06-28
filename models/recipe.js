@@ -3,6 +3,10 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 
+const ingredientSchema = new Schema({
+  ingredient: [String],
+})
+
 const commentSchema = new Schema({
   comment: String,
 }, {
@@ -12,7 +16,8 @@ const commentSchema = new Schema({
 const recipeSchema = new Schema({
   name: String,
   image: String,
-  ingredients: String,
+  ingredients: [ingredientSchema],
+  preparation: String,
   recipeUrl: String,
   prepTime: Number,
   contributedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' },

@@ -1,16 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add a new recipe</title>
-</head>
-<body>
-  <h2>Add a recipe!</h2>
-  <form action="/recipes" method="POST">
-    <input name='name' type="text" autocomplete="off"> 
-    <button type="submit">Add recipe</button>
-  </form>
-</body>
-</html>
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<main>
+  <section>
+    <% if (user) { %> 
+      <h2>Add Recipe</h2>
+      <form action="/recipes" method="POST">
+        <label>
+          Name of Recipe: 
+          <input type="text" name="name" autocomplete="off">
+        </label>
+        <label>
+          Ingredients:
+          <input type="text" name="ingredient" autocomplete="off">
+        </label>
+        <label>
+          Preparation:
+          <input type="text" name="preparation">
+        </label>
+        <label>
+          Preparation Time:
+          <input type="text" name="prepTime" autocomplete="off">
+        </label>
+        <button type="submit">Add Recipe</button>
+      </form>
+      <% } %> 
+  </section>
+</main>
+
+<%- include('../partials/footer') %>
