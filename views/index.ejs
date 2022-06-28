@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>WELCOME, <%= user ? user.profile.name : "lets cook somethin good!!" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -12,7 +12,7 @@
     </div>
   <% } %>
 
-  <div class="dropdown">
+  <!-- <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       Lets get cooking!
     </button>
@@ -20,7 +20,7 @@
       <li><a class="dropdown-item" href="#">Browse Recipes</a></li>
       <li><a class="dropdown-item" href="#">Add a Recipe</a></li>
       <li><a class="dropdown-item" href="#">My Saved Recipes</a></li>
-    </ul>
+    </ul> -->
   </div>
 </main>
 

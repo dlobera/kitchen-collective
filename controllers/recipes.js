@@ -1,6 +1,21 @@
 import { Profile } from "../models/profile.js"
 import { Recipe } from "../models/recipe.js"
 
+function index(req, res) {
+  Recipe.find({})
+  .then(recipes => {
+    res.render('recipes/index', {
+      recipes,
+      title: "Recipes",
+      user: req.user ? req.user : null
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 function recipeSearch(req, res) {
   res.render('recipes/search', {
     title: 'Search Results',
@@ -36,6 +51,7 @@ function show(req, res) {
 }
 
 export {
+  index,
   recipeSearch,
   create,
   show,
