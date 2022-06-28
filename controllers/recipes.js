@@ -1,7 +1,7 @@
 import { Profile } from "../models/profile.js"
-import axios from "axios"
 import { Recipe } from "../models/recipe.js"
-import res from "express/lib/response"
+import axios from "axios"
+
 
 function index(req, res) {
   Recipe.find({})
@@ -46,18 +46,12 @@ function show(req, res) {
 }
 
 function newRecipe(req, res) {
-  Recipe.find({})
-  .then(recipes => {
-    res.render('recipes/new', {
-      title: 'Add Recipe',
-      recipes: recipes,
+  console.log('new recipe')
+  res.render('recipes/new', {
+      title: 'Add a Recipe',
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/recipes')
-  })
-}
+  }
+
 
 
 function recipeSearch(req, res) {
