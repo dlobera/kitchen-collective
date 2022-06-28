@@ -1,6 +1,7 @@
 import { Profile } from "../models/profile.js"
 import axios from "axios"
 import { Recipe } from "../models/recipe.js"
+import res from "express/lib/response"
 
 function index(req, res) {
   Recipe.find({})
@@ -14,13 +15,6 @@ function index(req, res) {
   .catch(err => {
     console.log(err)
     res.redirect('/')
-  })
-}
-
-function recipeSearch(req, res) {
-  res.render('recipes/search', {
-    title: 'Search Results',
-    search: req.body.search ? req.body.search : null
   })
 }
 
@@ -51,9 +45,34 @@ function show(req, res) {
   })
 }
 
+function newRecipe(req, res) {
+  Recipe.find({})
+  .then(recipes => {
+    res.render('recipes/new', {
+      title: 'Add Recipe',
+      recipes: recipes,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+
+function recipeSearch(req, res) {
+  axios.get('')
+  res.render('recipes/search', {
+    title: 'Search Results',
+    search: req.body.search ? req.body.search : null
+  })
+}
+
+
 export {
   index,
-  recipeSearch,
   create,
   show,
+  newRecipe as new,
+  recipeSearch,
 }
