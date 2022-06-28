@@ -1,4 +1,5 @@
 import { Profile } from "../models/profile.js"
+import axios from "axios"
 import { Recipe } from "../models/recipe.js"
 
 function index(req, res) {
