@@ -3,10 +3,10 @@
 
 <body>
   <h2>Recipe Box</h2>
-  <% recipes.forEach(recipe => { %>
-    <a href="/recipes/<%= recipe.name %>"><%= recipe.name %></a>
-  <% }) %>
   <a href="/recipes/new">Add a recipe</a>
+  <% recipes.forEach(recipe => { %>
+    <ul><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></ul>
+  <% }) %>
 </body>
 
   

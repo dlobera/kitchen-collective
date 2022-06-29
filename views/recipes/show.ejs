@@ -6,14 +6,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add a new recipe</title>
+  <title>New recipe</title>
 </head>
 <body>
-  <h2>Add a recipe!</h2>
-  <form 
-    action="/recipes/<%=recipe._id%>" 
-    method="POST"
-  >
+  <h1><%= title %> </h1>
+  <div>
+    
+  </div>
+  <div>
+    <a href="/recipes/<%=recipe._id%>/edit">
+      <button>Edit Recipe</button></a>
+  </div>
+  <div>Recipe Name:</div>
+  <div><%= recipe.name %> </div>
+  <div>Ingredients:</div>
+  <div><%= recipe.ingredients %> </div>
+  <div>Preparation:</div>
+  <div><%= recipe.preparation %> </div>
+  <div>Preparation Time:</div>
+  <div><%= recipe.prepTime %> </div>
+  <div></div>
+  <div></div>
+<!--   
   <label for="category">Recipe Name</label>
   <input name="category" type="text" autocomplete="off"> 
   <label for="">ingredients</label>
@@ -21,8 +35,7 @@
   <input name="prepTime" type="number">
   <input name="yield"type="number">
   <button type="submit">Add recipe</button>
-  
-  </form>
+   -->
 </body>
 </html>
 <%- include('../partials/footer') %>
