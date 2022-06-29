@@ -2,7 +2,6 @@ import { Profile } from "../models/profile.js"
 import { Recipe } from "../models/recipe.js"
 import axios from "axios"
 
-
 function index(req, res) {
   Recipe.find({})
   .then(recipes => {
@@ -49,11 +48,8 @@ function newRecipe(req, res) {
   res.render('recipes/new', {
       title: 'Add a Recipe',
     })
-  }
+}
   
-
-
-
 function recipeSearch(req, res) {
   axios.get('')
   res.render('recipes/search', {
@@ -76,7 +72,6 @@ function edit(req, res) {
   })
 }
 
-
 function update(req, res) {
   Recipe.findByIdAndUpdate(req.params.id, req.body, {new:true})
   .then(recipe =>{
@@ -98,10 +93,6 @@ Recipe.findByIdAndDelete(req.params.id)
   res.redirect("/recipes") 
 })
 }
-
-
-
-
 
 export {
   index,
