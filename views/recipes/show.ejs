@@ -11,12 +11,15 @@
 <body>
   <h1><%= title %> </h1>
   <div>
-    
+
   </div>
   <div>
     <a href="/recipes/<%=recipe._id%>/edit">
       <button>Edit Recipe</button></a>
+    <a href="/recipes/<%=recipe._id%>/delete">
+      <button>Delete Recipe</button></a>
   </div>
+  <br>
   <div>Recipe Name:</div>
   <div><%= recipe.name %> </div>
   <div>Ingredients:</div>
@@ -27,15 +30,7 @@
   <div><%= recipe.prepTime %> </div>
   <div>Serving Size:</div>
   <div><%= recipe.servingSize %> </div>
-<!--   
-  <label for="category">Recipe Name</label>
-  <input name="category" type="text" autocomplete="off"> 
-  <label for="">ingredients</label>
-  <input name="ingredients" type="text" autocomplete="off">
-  <input name="prepTime" type="number">
-  <input name="yield"type="number">
-  <button type="submit">Add recipe</button>
-   -->
+
 </body>
 </html>
 <%- include('../partials/footer') %>

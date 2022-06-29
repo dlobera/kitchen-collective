@@ -23,7 +23,10 @@ router.post('/', isLoggedIn, recipesCtrl.create)
 router.post('/search', isLoggedIn, recipesCtrl.recipeSearch)
 
 //PUT localhost:3000/recipes/:id
-router.put('/:id', recipesCtrl.update)
+router.put('/:id', isLoggedIn, recipesCtrl.update)
+
+//DELETE localhost:3000/recipes/:id
+router.delete('/:id', isLoggedIn, recipesCtrl.delete)
 
 
 
