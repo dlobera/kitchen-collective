@@ -51,7 +51,10 @@ function newRecipe(req, res) {
 }
   
 function recipeSearch(req, res) {
-  axios.get('')
+  axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${req.body.search}&app_id=${process.env.API_ID}}&app_key=${process.env.API_KEY}`)
+  .then(response => {
+    console.log(response);
+  })
   res.render('recipes/search', {
     title: 'Search Results',
     search: req.body.search ? req.body.search : null
