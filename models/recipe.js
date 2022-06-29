@@ -3,9 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 
-const ingredientSchema = new Schema({
-  ingredient: [String],
-})
+
 
 const commentSchema = new Schema({
   comment: String,
@@ -16,7 +14,7 @@ const commentSchema = new Schema({
 const recipeSchema = new Schema({
   name: String,
   image: String,
-  ingredients: [ingredientSchema],
+  ingredients: [String],
   preparation: String,
   recipeUrl: String,
   prepTime: Number,

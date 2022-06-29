@@ -1,0 +1,48 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit this Recipe!</h1>
+  <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
+    <label>
+      Name of Recipe: 
+      <input type="text" name="name" autocomplete="off">
+    </label>
+    <label>
+      Ingredients:
+      <input type="text" name="ingredient" autocomplete="off">
+    </label>
+    <label>
+      Preparation:
+      <input type="text" name="preparation">
+    </label>
+    <label>
+      Preparation Time:
+      <input type="number" name="prepTime" autocomplete="off" for="select">
+    </label>
+    <select name="" id="">
+      <option value="min">minute</option>
+      <option value="mins">minutes</option>
+      <option value="hr">hour</option>
+      <option value="hrs">hours</option>
+    </select>
+    <label for="servingSizeSelect">Serving Size:</label>
+    <select name="servingSize" id="serving-select">
+      <option value="1">1 person</option>
+      <option value="2">2 people</option>
+      <option value="3">3 people</option>
+      <option value="4">4 people</option>
+      <option value="5">5 people</option>
+      <option value="6">6 people</option>
+      <option value="7">7 people</option>
+      <option value="8">8 people</option>
+      <option value="9">9 people</option>
+      <option value="10">10 people</option>
+      <option value="11">11 people</option>
+      <option value="12">12 people</option>
+     
+    </select>
+    <button type="submit">Add Recipe</button>
+  </form>
+</section>
+<%- include('../partials/footer') %>

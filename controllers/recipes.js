@@ -20,7 +20,6 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-	req.body.tasty = !!req.body.tasty
   Recipe.create(req.body)
   .then(recipe => {
     res.redirect('/recipes')
@@ -51,6 +50,7 @@ function newRecipe(req, res) {
       title: 'Add a Recipe',
     })
   }
+  
 
 
 
@@ -62,6 +62,21 @@ function recipeSearch(req, res) {
   })
 }
 
+function edit(req, res) {
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    res.render('recipes/edit', {
+      recipe: recipe,
+      title: 'Edit Recipe'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/tacos')
+  })
+}
+
+
 
 export {
   index,
@@ -69,4 +84,5 @@ export {
   show,
   newRecipe as new,
   recipeSearch,
+  edit,
 }
