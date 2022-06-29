@@ -19,10 +19,19 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
+  if (req.body.ingredients) {
+    req.body.ingredients = req.body.ingredients.split(', ')
+  }
+  console.log(req.body);
   Recipe.create(req.body)
   .then(recipe => {
-    res.redirect('/recipes')
+    recipe.ingredients.push(req.body.ingredients)
+    recipe.save()
+    .then(recipe => {
+      res.redirect('/recipes')
+    })
   })
+ 
   .catch(err => {
     console.log(err)
     res.redirect('/recipes')
@@ -53,7 +62,7 @@ function newRecipe(req, res) {
 function recipeSearch(req, res) {
   axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${req.body.search}&app_id=${process.env.API_ID}}&app_key=${process.env.API_KEY}`)
   .then(response => {
-    console.log(response);
+    console.log(response.data.hits);
   })
   res.render('recipes/search', {
     title: 'Search Results',
