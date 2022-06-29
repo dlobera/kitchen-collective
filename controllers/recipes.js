@@ -77,6 +77,20 @@ function edit(req, res) {
 }
 
 
+function update(req, res) {
+  Recipe.findByIdAndUpdate(req.params.id, req.body, {new:true})
+  .then(recipe =>{
+    res.redirect(`/recipes/${recipe._id}`)
+  })
+  .catch ( error => {
+    console.log(error)
+    res.redirect("/recipes") 
+})
+}
+
+
+
+
 
 export {
   index,
@@ -85,4 +99,5 @@ export {
   newRecipe as new,
   recipeSearch,
   edit,
+  update,
 }
