@@ -17,6 +17,9 @@
 ### -Express Node.Js
 ### -Heroku
 
+## Credits:
+add here
+
 ## Next Steps:
 ## -I want to add my API properly because it didn't workout this time around. I plan to add on API's and make it. 
 ## -I want to concert my comment section to a review section for my recipes.
