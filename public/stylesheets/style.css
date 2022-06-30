@@ -1,6 +1,5 @@
 body {
-  background-image: url('../assets/kitchen.PNG');
-  background-size: cover;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -32,10 +31,10 @@ body {
 }
 
 nav {
-  /* background-color: purple; */
+  /* background-color: grey; */
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 main {
@@ -47,4 +46,5 @@ main {
 
 h1 {
   font-size: 3.6rem;
+  
 }

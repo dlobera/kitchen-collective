@@ -1,22 +1,23 @@
   <!-- <% if (!user) { %>
     <link rel="stylesheet" href="/stylesheets/siwg.css">
   <% } %> -->
+<link rel="stylesheet" href="/stylesheets/partials/nav.css">
 </head>
 <body>
   <nav>
     <i class="fa-light fa-pot-food"></i>
     <a href="/profiles"
 		>
-      <button type="submit">Profiles</button>
+      <button class="prof" type="submit">Profiles</button>
 		</a>
     <a href="/recipes"
 			<%- title === 'Recipes' ? 'class="active"' : '' %>
 		>
-      <button type="submit">Recipes</button>
+      <button class="rec" type="submit">Recipes</button>
 		</a>
     <% if (user) { %>
       <a href="/auth/logout">
-        <button type="submit">Logout</button>
+        <button class="log" type="submit">Logout</button>
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
