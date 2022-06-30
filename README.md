@@ -6,6 +6,7 @@
 
 ![trello-planning-screenshot](public/assets/trelloss.png)
 
+![kitchen-collective-erd](public/assets/Recipe%20Box%20ERD%20(1).png)
 
 ## Techologies Used
 ### -HTML
