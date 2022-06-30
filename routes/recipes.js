@@ -22,6 +22,9 @@ router.post('/', isLoggedIn, recipesCtrl.create)
 //POST localhost:3000/search
 router.post('/search', isLoggedIn, recipesCtrl.recipeSearch)
 
+//POST localhost:3000/recipes/comments
+router.post('/:id/comments', isLoggedIn, recipesCtrl.createComment)
+
 //PUT localhost:3000/recipes/:id
 router.put('/:id', isLoggedIn, recipesCtrl.update)
 

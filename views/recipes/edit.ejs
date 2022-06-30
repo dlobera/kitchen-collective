@@ -6,11 +6,11 @@
   <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
     <label>
       Name of Recipe: 
-      <input type="text" name="name" autocomplete="off">
+      <input type="text" name="name" value="<%= recipe.name %>" autocomplete="off">
     </label>
     <label>
       Ingredients:
-      <input type="text" name="ingredient" autocomplete="off">
+      <input type="text" name="ingredient" value="<%= recipe.ingredients %>" autocomplete="off">
     </label>
     <label>
       Preparation:

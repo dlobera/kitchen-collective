@@ -1,3 +1,8 @@
+body {
+  background-image: url('../assets/kitchen.PNG');
+  background-size: cover;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -17,15 +22,17 @@ html {
 }
 
 body {
-  background-color: pink;
+  background-image: url('../assets/kitchen.PNG');
+  background-size: cover;
+  /* background-color: pink; */
   /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  margin: 0;
+  margin: 0; */
 }
 
 nav {
-  background-color: purple;
+  /* background-color: purple; */
   font-size: 1.6rem;
   display: flex;
   justify-content: center;

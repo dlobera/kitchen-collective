@@ -41,9 +41,10 @@ function create(req, res) {
 function show(req, res) {
   Recipe.findById(req.params.id)
   .then(recipe => {
+    console.log('show',recipe);
     res.render('recipes/show', {
       recipe,
-      title: "recipe"
+      title: "recipe",
     })
   })
   .catch(err => {
@@ -106,6 +107,23 @@ Recipe.findByIdAndDelete(req.params.id)
 })
 }
 
+function createComment(req, res) {
+  console.log('create comment*******');
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    console.log(recipe)
+    recipe.comments.push(req.body)
+    recipe.save()
+    .then(() => {
+      res.redirect(`/recipes/${recipe._id}`)
+    })
+  })
+  .catch ( error => {
+    console.log(error)
+    res.redirect("/recipes") 
+})
+}
+
 export {
   index,
   create,
@@ -115,4 +133,5 @@ export {
   edit,
   update,
   deleteRecipe as delete,
+  createComment,
 }
