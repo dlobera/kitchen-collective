@@ -14,11 +14,11 @@
     </label>
     <label>
       Preparation:
-      <input type="text" name="preparation">
+      <input type="text" name="preparation" value="<%= recipe.preparation %>">
     </label>
     <label>
       Preparation Time:
-      <input type="number" name="prepTime" autocomplete="off" for="select">
+      <input type="number" name="prepTime" value="<%= recipe.prepTime %>" autocomplete="off" for="select">
     </label>
     <select name="" id="">
       <option value="min">minute</option>
@@ -26,7 +26,7 @@
       <option value="hr">hour</option>
       <option value="hrs">hours</option>
     </select>
-    <label for="servingSizeSelect">Serving Size:</label>
+    <label for="servingSizeSelect" value="<%= recipe.servingSize %>">Serving Size:</label>
     <select name="servingSize" id="serving-select">
       <option value="1">1 person</option>
       <option value="2">2 people</option>

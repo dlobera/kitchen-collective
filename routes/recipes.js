@@ -14,7 +14,7 @@ router.get('/new', recipesCtrl.new)
 router.get('/:id', recipesCtrl.show)
 
 //GET localhost:3000/recipes/:id/edit
-router.get('/:id/edit', recipesCtrl.edit)
+router.get('/:id/edit', isLoggedIn, recipesCtrl.edit)
 
 // POST localhost:3000/recipes
 router.post('/', isLoggedIn, recipesCtrl.create)

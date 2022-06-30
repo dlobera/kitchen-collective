@@ -40,6 +40,7 @@ function create(req, res) {
 
 function show(req, res) {
   Recipe.findById(req.params.id)
+  .populate('owner')
   .then(recipe => {
     console.log('show',recipe);
     res.render('recipes/show', {
@@ -97,15 +98,23 @@ function update(req, res) {
 }
 
 function deleteRecipe(req, res) {
-Recipe.findByIdAndDelete(req.params.id)
-.then(() => {
+Recipe.findById(req.params.id)
+.then(recipe => {
+  if (recipe.owner.equals(req.user.profile._id)) {
+    recipe.delete()
+    .then(() => {
   res.redirect("/recipes")
 })
-.catch (err => {
+  } else {
+    throw new Error ("NOT AUTHORIZED")
+  }
+  })
+  .catch (error => {
   console.log(error)
   res.redirect("/recipes") 
 })
 }
+
 
 function createComment(req, res) {
   console.log('create comment*******');

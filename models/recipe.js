@@ -19,7 +19,7 @@ const recipeSchema = new Schema({
   recipeUrl: String,
   prepTime: Number,
   servingSize: Number,
-  contributedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' },
+  owner: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' },
   comments: [commentSchema],
 })
 
