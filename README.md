@@ -4,6 +4,8 @@
 ## Deployed app link: https://kitchen-collective.herokuapp.com/
 ## Trello Link: https://trello.com/b/dAQvLxzy/kitchen-collective
 
+<img src="./assets/trelloss.png"></img>
+
 ## Techologies Used
 ### -HTML
 ### -CSS
