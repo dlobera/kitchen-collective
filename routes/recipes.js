@@ -8,10 +8,10 @@ const router = Router()
 router.get('/', recipesCtrl.index)
 
 //GET localhost:3000/recipes/new
-router.get('/new', recipesCtrl.new)
+router.get('/new', isLoggedIn, recipesCtrl.new)
 
 //GET localhost:3000/recipe/:id
-router.get('/:id', recipesCtrl.show)
+router.get('/:id', isLoggedIn, recipesCtrl.show)
 
 //GET localhost:3000/recipes/:id/edit
 router.get('/:id/edit', isLoggedIn, recipesCtrl.edit)

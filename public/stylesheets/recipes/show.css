@@ -1,6 +1,42 @@
 nav {
   background-color: #ebab83;
 }
-h1 {
-  font-size: x-large
+.name {
+  font-size: 20px
+}
+
+.recN {
+  font-size: 30px;
+}
+
+.ing {
+  font-size: 20px;
+}
+
+.recI {
+  font-size: 30px;
+}
+
+.prep {
+  font-size: 20 px;
+}
+
+.recP {
+  font-size: 30px;
+}
+
+.pt {
+  font-size: 20px;
+}
+
+recPT {
+  font-size: 30px;
+}
+
+.ss {
+  font-size: 20px;
+}
+
+.recSS {
+  font-size: 30px;
 }

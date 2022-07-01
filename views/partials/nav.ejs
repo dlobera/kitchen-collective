@@ -6,6 +6,10 @@
 <body>
   <nav>
     <i class="fa-light fa-pot-food"></i>
+    <form action="/recipes/search" class="search" method="POST">
+      <input type="text" name="search" placeholder="Search for a recipe!" autocomplete="off">
+      <button type="submit">Search!</button>
+    </form>
     <a href="/profiles"
 		>
       <button class="prof" type="submit">Profiles</button>
@@ -26,10 +30,6 @@
         </button>
       </a>
     <% } %>
-    <form action="/recipes/search" method="POST">
-      <input type="text" name="search" placeholder="Search for a recipe!" autocomplete="off">
-      <button type="submit">Search!</button>
-    </form>
   </nav>
   
     

@@ -10,10 +10,11 @@
   <title></title>
 </head>
 <body>
-  <h1><%= title %> </h1>
+  <!-- <h1><%= title %> </h1> -->
   <div>
   
   </div>
+  <br>
   <div>
     <% if (recipe.owner.equals(user.profile._id)) { %>
       <a href="/recipes/<%=recipe._id%>/edit">
@@ -24,16 +25,16 @@
     <% } %>
   </div>
   <br>
-  <div>Recipe Name:</div>
-  <div><%= recipe.name %> </div>
-  <div>Ingredients:</div>
-  <div><%= recipe.ingredients %> </div>
-  <div>Preparation:</div>
-  <div><%= recipe.preparation %> </div>
-  <div>Preparation Time:</div>
-  <div><%= recipe.prepTime %> </div>
-  <div>Serving Size:</div>
-  <div><%= recipe.servingSize %> </div>
+  <div class="name">Recipe Name:</div>
+  <div class="recN"><%= recipe.name %> </div>
+  <div class="ing">Ingredients:</div>
+  <div class="recI"><%= recipe.ingredients %> </div>
+  <div class="prep">Instructions:</div>
+  <div class="recP"><%= recipe.preparation %> </div>
+  <div class="pt">Preparation Time:</div>
+  <div class="recPT"><%= recipe.prepTime %> </div>
+  <div class="ss">Serving Size:</div>
+  <div class="recSS"><%= recipe.servingSize %> </div>
 
 
   <% recipe.comments.forEach(function(comment) { %>

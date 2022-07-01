@@ -1,16 +1,19 @@
 nav {
   background-color: #cbf4ab;
 }
-.cardContainer{
+/* .cardContainer{
   background-color: antiquewhite;
   padding: 20px;
   border-radius: 30px;
   border-style:solid;
   border-color: black;
-}
+} */
 
 .card {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 200 px;
+  border-style: solid;
+  border-color: black;
+  margin: 30px;
 }
