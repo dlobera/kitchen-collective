@@ -1,3 +1,32 @@
+.card {
+  background-color: antiquewhite;
+  border-radius: 50px;
+  width: 500px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.com {
+  background-color: antiquewhite;
+  border-radius: 50px;
+  width: 450px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left: 720px;
+  padding: 50px;
+  position: relative;
+  bottom: 410px;
+}
+
+.comS {
+  background-color: aqua;
+  width: 350px;
+}
+
 nav {
   background-color: #ebab83;
 }
@@ -6,7 +35,7 @@ nav {
 }
 
 .recN {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .ing {
@@ -14,23 +43,23 @@ nav {
 }
 
 .recI {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .prep {
-  font-size: 20 px;
+  font-size: 20px;
 }
 
 .recP {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .pt {
   font-size: 20px;
 }
 
-recPT {
-  font-size: 30px;
+.recPt {
+  font-size: 25px;
 }
 
 .ss {
@@ -38,5 +67,5 @@ recPT {
 }
 
 .recSS {
-  font-size: 30px;
+  font-size: 25px;
 }

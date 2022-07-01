@@ -25,21 +25,29 @@
     <% } %>
   </div>
   <br>
-  <div class="name">Recipe Name:</div>
-  <div class="recN"><%= recipe.name %> </div>
-  <div class="ing">Ingredients:</div>
-  <div class="recI"><%= recipe.ingredients %> </div>
-  <div class="prep">Instructions:</div>
-  <div class="recP"><%= recipe.preparation %> </div>
-  <div class="pt">Preparation Time:</div>
-  <div class="recPT"><%= recipe.prepTime %> </div>
-  <div class="ss">Serving Size:</div>
-  <div class="recSS"><%= recipe.servingSize %> </div>
-
-
+  <div class="card">
+    <div class="name">Recipe Name:</div>
+    <div class="recN"><%= recipe.name %> </div>
+    <br>
+    <div class="ing">Ingredients:</div>
+    <div class="recI"><%= recipe.ingredients %> </div>
+    <br>
+    <div class="prep">Instructions:</div>
+    <div class="recP"><%= recipe.preparation %> </div>
+    <br>
+    <div class="pt">Preparation Time:</div>
+    <div class="recPt"><%= recipe.prepTime %> </div>
+    <br>
+    <div class="ss">Serving Size:</div>
+    <div class="recSS"><%= recipe.servingSize %> </div>
+  </div> 
+<br>
+<div class="com">
+  <div class="comS">
   <% recipe.comments.forEach(function(comment) { %>
     <li class="card-text"><%= comment.comment %></li>
   <% }) %>
+  </div>
   <form
     action="/recipes/<%= recipe._id %>/comments"
     method="POST"
@@ -53,10 +61,12 @@
     autocomplete="off"
     required
   />
+  <br>
   <button type="submit" class="btn btn-primary">
     Add Comment
   </button>
-</form>
+  </form>
+</div>
 </body>
 </html>
 <%- include('../partials/footer') %>
