@@ -1,6 +1,11 @@
 nav {
   background-color: #cbf4ab;
 }
+h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 40px;
+}
 
 .sec {
   background-color: #eafbdd;
@@ -13,13 +18,16 @@ nav {
   padding: 30px;
   content: inherit;
   position: relative;
-  top: 70px;
+  top: 50px;
 }
 
 #lab {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 30px;
 }
 .ar {
   display: flex;
@@ -28,5 +36,8 @@ nav {
   background-color: #cbf4ab;
   color: black;
   border-radius: 50px;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 15px;
 }
 

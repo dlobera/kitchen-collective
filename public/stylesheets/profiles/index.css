@@ -1,5 +1,4 @@
 body {
-  /* background-image: url('/assets/blank.png'); */
   background-color: #ebab83;
   background-size: cover;
 }
@@ -10,6 +9,11 @@ nav {
  display: flex;
  flex-direction: row;
  align-items: stretch;
+}
+.card-title {
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 .card {

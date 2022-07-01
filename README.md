@@ -1,6 +1,10 @@
 # Kitchen Collective
 ### Kitchen collective is a web app to create recies and share them with friends and family. Specifically I wanted to create a page where my grandma could easily login and share recipes with me so I'll stop losing the papers she gives me. I wanted it to have a granparent kitchen feel when you land on my page, mixed with a little modern fun to represent our relationship and the bond we experince through coming together and creating the most delicious recipes in the kitchen. 
 
+![kitchen-collective-screenshot](public/assets/Screen%20Shot%202022-07-01%20at%203.29.14%20AM.png)
+
+![kitchen-collective-screenshot-2](public/assets/Screen%20Shot%202022-07-01%20at%203.28.48%20AM.png)
+
 ## Deployed app link: https://kitchen-collective.herokuapp.com/
 ## Trello Link: https://trello.com/b/dAQvLxzy/kitchen-collective
 

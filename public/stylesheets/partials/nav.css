@@ -3,13 +3,18 @@
   color: #ebab83;
   border-radius: 50px;
   font-size: 20px;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .prof {
   background-color: black;
   color: #cbf4ab;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 20px;font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .rec {
@@ -17,6 +22,9 @@
   color: #ebab83;
   border-radius: 50px;
   font-size: 20px;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .log{
@@ -24,6 +32,9 @@
   color: #cbf4ab;
   border-radius: 50px;
   font-size: 20px;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .search {
