@@ -22,7 +22,8 @@
 ### -Heroku
 
 ## Credits:
-add here
+Orchid icon by Icons8.
+thanks Joe, Hunter, Ben, Emily and Haydee!!!!
 
 ## Next Steps:
 ## -I want to add my API properly because it didn't workout this time around. I plan to add on API's and make it. 
