@@ -2,7 +2,6 @@ body {
   background-image: url('/assets/blank.png');
   background-size: cover;
 }
-
 #add {
   background-color: antiquewhite;
   border-color: black;
@@ -26,7 +25,6 @@ body {
   justify-content: center;
   font-size: 40px;
 }
-
 .AR {
   background-color: #f7ddcd;
   display: flex;
@@ -35,7 +33,6 @@ body {
   font-weight: bold;
   color: black;
 }
-
 .all {
   display: flex;
   justify-content: center;

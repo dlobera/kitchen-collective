@@ -2,7 +2,6 @@ body {
   background-image: url('/assets/kitchen.png');
   background-size: cover;
 }
-
 main {
   display: none;
 }

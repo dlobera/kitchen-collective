@@ -7,7 +7,6 @@
   font-weight: bold;
   font-size: 25px;
 }
-
 .prof {
   background-color: black;
   color: #cbf4ab;
@@ -16,7 +15,6 @@
   font-weight: bold;
   font-size: 25px;
 }
-
 .rec {
   background-color: black;
   color: #ebab83;
@@ -26,7 +24,6 @@
   font-weight: bold;
   font-size: 25px;
 }
-
 .log{
   background-color: black;
   color: #cbf4ab;
@@ -36,7 +33,6 @@
   font-weight: bold;
   font-size: 25px;
 }
-
 .search {
   display: none;
 }

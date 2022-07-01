@@ -6,7 +6,6 @@ h2 {
   font-weight: bold;
   font-size: 40px;
 }
-
 .sec {
   background-color: #eafbdd;
   border-radius: 50px;
@@ -20,7 +19,6 @@ h2 {
   position: relative;
   top: 50px;
 }
-
 #lab {
   display: flex;
   flex-direction: column;
