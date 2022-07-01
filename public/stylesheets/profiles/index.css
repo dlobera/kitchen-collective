@@ -1,13 +1,16 @@
+body {
+  /* background-image: url('/assets/blank.png'); */
+  background-color: #ebab83;
+  background-size: cover;
+}
 nav {
   background-color: #cbf4ab;
 }
-/* .cardContainer{
-  background-color: antiquewhite;
-  padding: 20px;
-  border-radius: 30px;
-  border-style:solid;
-  border-color: black;
-} */
+.cardContainer{
+ display: flex;
+ flex-direction: row;
+ align-items: stretch;
+}
 
 .card {
   background-color: antiquewhite;
@@ -16,4 +19,8 @@ nav {
   border-style: solid;
   border-color: black;
   margin: 30px;
+}
+
+h1 {
+  font-size: 20px;
 }

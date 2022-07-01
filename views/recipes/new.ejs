@@ -1,23 +1,27 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/recipes/new.css">
 <%- include('../partials/nav') %>
 <main>
-  <section>
+  <section class="sec">
     <% if (user) { %> 
       <h2>Add Recipe</h2>
       <form action="/recipes" method="POST">
-        <label>
+        <label id="lab">
           Name of Recipe: 
           <input type="text" name="name" autocomplete="off">
-        </label>
-        <label>
+        </label id="lab">
+        <br>
+        <label id="lab">
           Ingredients:
           <input type="text" name="ingredients" autocomplete="off">
         </label>
-        <label>
-          Preparation:
+        <br>
+        <label id="lab">
+          Instructions:
           <input type="text" name="preparation">
         </label>
-        <label>
+        <br>
+        <label id="lab">
           Preparation Time:
           <input type="number" name="prepTime" autocomplete="off" for="select">
         </label>
@@ -27,7 +31,8 @@
           <option value="hr">hour</option>
           <option value="hrs">hours</option>
         </select>
-        <label for="servingSizeSelect">Serving Size:</label>
+        <br>
+        <label id="lab" for="servingSizeSelect">Serving Size:</label>
         <select name="servingSize" id="serving-select">
           <option value="1">1 person</option>
           <option value="2">2 people</option>
@@ -41,9 +46,9 @@
           <option value="10">10 people</option>
           <option value="11">11 people</option>
           <option value="12">12 people</option>
-         
         </select>
-        <button type="submit">Add Recipe</button>
+        <br>
+        <button class="ar" type="submit">Add Recipe</button>
       </form>
       <% } %> 
   </section>

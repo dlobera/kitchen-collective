@@ -11,20 +11,7 @@
 </head>
 <body>
   <!-- <h1><%= title %> </h1> -->
-  <div>
   
-  </div>
-  <br>
-  <div>
-    <% if (recipe.owner.equals(user.profile._id)) { %>
-      <a href="/recipes/<%=recipe._id%>/edit">
-        <button>Edit Recipe</button></a>
-      <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-        <button>Delete Recipe</button></a>
-      </form>
-    <% } %>
-  </div>
-  <br>
   <div class="card">
     <div class="name">Recipe Name:</div>
     <div class="recN"><%= recipe.name %> </div>
@@ -41,6 +28,17 @@
     <div class="ss">Serving Size:</div>
     <div class="recSS"><%= recipe.servingSize %> </div>
   </div> 
+  <br>
+  
+  <div class="eds">
+    <% if (recipe.owner.equals(user.profile._id)) { %>
+      <a href="/recipes/<%=recipe._id%>/edit">
+        <button class="ed">Edit Recipe</button></a>
+      <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+        <button class="de">Delete Recipe</button></a>
+      </form>
+    <% } %>
+  </div>
 <br>
 <div class="com">
   <div class="comS">
@@ -62,7 +60,7 @@
     required
   />
   <br>
-  <button type="submit" class="btn btn-primary">
+  <button type="submit" id="btn" class="btn btn-primary">
     Add Comment
   </button>
   </form>

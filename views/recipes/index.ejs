@@ -1,12 +1,14 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="../stylesheets/recipes/index.css">
 <%- include('../partials/nav') %>
 
-<body>
-  <h2>Recipe Box</h2>
-  <a href="/recipes/new">Add a recipe</a>
+<div id="add">
+  <h2 id="rec">Recipe Box</h2>
+  <a class="AR" href="/recipes/new">ADD A RECIPE</a>
+  <br>
   <% recipes.forEach(recipe => { %>
-    <ul><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></ul>
+  <a class="all" href="/recipes/<%= recipe._id %>"><%= recipe.name %></a>
   <% }) %>
-</body>
+  </div>
   
 <%- include('../partials/footer') %>

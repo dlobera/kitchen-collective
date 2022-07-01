@@ -1,22 +1,26 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/recipes/edit.css">
 <%- include('../partials/nav') %>
 
-<section>
+<section class="secT">
   <h1>Edit this Recipe!</h1>
   <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
-    <label>
+    <label class="labE">
       Name of Recipe: 
       <input type="text" name="name" value="<%= recipe.name %>" autocomplete="off">
     </label>
-    <label>
+    <br>
+    <label class="labE">
       Ingredients:
       <input type="text" name="ingredient" value="<%= recipe.ingredients %>" autocomplete="off">
     </label>
-    <label>
+    <br>
+    <label class="labE">
       Preparation:
       <input type="text" name="preparation" value="<%= recipe.preparation %>">
     </label>
-    <label>
+    <br>
+    <label class="labE">
       Preparation Time:
       <input type="number" name="prepTime" value="<%= recipe.prepTime %>" autocomplete="off" for="select">
     </label>
@@ -26,7 +30,8 @@
       <option value="hr">hour</option>
       <option value="hrs">hours</option>
     </select>
-    <label for="servingSizeSelect" value="<%= recipe.servingSize %>">Serving Size:</label>
+    <br>
+    <label class="labE" for="servingSizeSelect" value="<%= recipe.servingSize %>">Serving Size:</label>
     <select name="servingSize" id="serving-select">
       <option value="1">1 person</option>
       <option value="2">2 people</option>
@@ -42,7 +47,8 @@
       <option value="12">12 people</option>
      
     </select>
-    <button type="submit">Add Recipe</button>
+    <br>
+    <button class="arE" type="submit">Add Recipe</button>
   </form>
 </section>
 <%- include('../partials/footer') %>

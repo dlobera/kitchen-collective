@@ -1,0 +1,32 @@
+nav {
+  background-color: #cbf4ab;
+}
+
+.sec {
+  background-color: #eafbdd;
+  border-radius: 50px;
+  width: 500px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  content: inherit;
+  position: relative;
+  top: 70px;
+}
+
+#lab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ar {
+  display: flex;
+  justify-content: center;
+  margin-left: 170px;
+  background-color: #cbf4ab;
+  color: black;
+  border-radius: 50px;
+}
+
